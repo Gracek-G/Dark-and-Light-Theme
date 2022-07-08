@@ -2,15 +2,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow&family=Cinzel&family=Kaushan+Script&family=Montserrat&family=Oswald&family=VT323&display=swap');
 
 :root {
-    --primary-colour: rgb(255, 92, 92);
-    --primary-variant: #f84c4c;
-    --secondary-colour: #1b9898;
+    --primary-color: rgb(255, 92, 92);
+    --primary-variant: #ff2d2d;
+    --secondary-color: #1b9999;
     --on-primary: rgb(250, 250, 250);
     --on-background: rgb(66, 66, 66);
     --on-background-alt: rgba(66, 66, 66, 0.7);
     --background: rgb(255, 255, 255);
     --box-shadow: 0 5px 20px 1px rgba(0, 0, 0, 0.5);
 }
+
+[data-theme="dark"] {
+    --primary-color: rgb(150, 65, 255);
+    --primary-variant: #6c63ff;
+    --secondary-color: #03dac5;
+    --on-primary: #000;
+    --on-background: rgba(255, 255, 255, 0.9);
+    --on-background-alt: rgba(255, 255, 255, 0.7);
+    --background: #121212;
+  }
 
 html {
     box-sizing: border-box;
@@ -50,20 +60,20 @@ h2 {
 nav {
     z-index: 10;
     position: fixed;
-    padding: 25px;
-    width: 100vw;
-    font-family: 'Oswald', sans-serif;
+    font-family: Oswald, sans-serif;
     font-size: 24px;
     letter-spacing: 3px;
-    background: rgb(255 255 255 /50%);
+    padding: 25px;
+    width: 100vw;
+    background: rgb(255 255 255 / 50%);
 }
 
 a {
-    color: var(--primary-colour);
-    font-weight: bold;
     margin-right: 25px;
+    color: var(--primary-color);
     text-decoration: none;
     border-bottom: 3px solid transparent;
+    font-weight: bold;
 }
 
 a:hover,
@@ -78,7 +88,7 @@ a:focus {
 }
 
 .image-container {
-    border: 2px solid var(--secondary-colour);
+    border: 2px solid var(--secondary-color);
     border-radius: 25px;
     padding: 10px 20px;
     margin-right: 25px;
@@ -105,7 +115,7 @@ button {
     border-radius: 10px;
     font-family: 'Oswald', sans-serif;
     font-size: 15px;
-    border: 2px solid var(--primary-colour);
+    border: 2px solid var(--primary-color);
     cursor: pointer;
 }
 
@@ -119,18 +129,18 @@ button:hover:not(.outline):not(:disabled) {
 }
 
 .primary {
-    background: var(--primary-colour);
+    background: var(--primary-color);
     color: var(--on-primary);
 }
 
 .secondary {
-    border: 2px solid var(--secondary-colour);
+    border: 2px solid var(--secondary-color);
 }
 
 .secondary,
 .secondary:hover,
 .outline.secondary:hover {
-    background: var(--secondary-colour);
+    background: var(--secondary-color);
     color: var(--on-primary);
 }
 
@@ -139,8 +149,8 @@ button:hover:not(.outline):not(:disabled) {
     color: var(--on-background);
 }
 
-.outline:hover:not(:disabled) {
-    background: var(--primary-colour);
+.outline:hover:not(:disabled):not(.secondary) {
+    background: var(--primary-color);
     color: var(--on-primary);
 }
 
@@ -162,7 +172,7 @@ p {
 .fa-brands {
     margin-right: 40px;
     font-size: 150px;
-    color: var(--primary-colour);
+    color: var(--primary-color);
     cursor: pointer;
 }
 
@@ -227,7 +237,7 @@ p {
 }
 
 input:checked + .slider {
-    background: var(--primary-colour);
+    background: var(--primary-color);
 }
 
 input:checked + .slider:before {
