@@ -6,8 +6,13 @@ const image2 = document.getElementById('image2');
 const image3 = document.getElementById('image3');
 const textBox = document.getElementById('text-box');
 
-// Dark or Light Images
+//Contact section buttons
+const twitchButton = document.getElementById("twitch");
+const gitHubButton = document.getElementById("github");
+const youTubeButton = document.getElementById("youtube");
+const twitterButton = document.getElementById("twitter");
 
+// Dark or Light Images
 function imageMode(color) {
     image1.src = `img/undraw_proud_coder_${color}.svg`;
     image2.src = `img/undraw_conceptual_idea_${color}.svg`;
@@ -66,3 +71,7 @@ function openTwitterLink () {
 
 //Event Listener
 toggleSwitch.addEventListener('change', switchTheme);
+twitchButton.addEventListener("click", openTwitchLink);
+gitHubButton.addEventListener("click", openGitHubLink);
+youTubeButton.addEventListener("click", openYouTubeLink);
+twitterButton.addEventListener("click", openTwitterLink); 
