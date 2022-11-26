@@ -52,7 +52,7 @@ function switchTheme(event) {
 
 // Contacts web links
 function openTwitchLink () {
-    const twitchLink = `https://www.twitch.tv/orcangg`;
+    const twitchLink = `https://www.twitch.tv`;
     window.open(twitchLink, '_blank');
 }
 
@@ -67,7 +67,7 @@ function openYouTubeLink () {
 }
 
 function openTwitterLink () {
-    const twitterLink = `https://twitter.com/OrcanGG`;
+    const twitterLink = `https://twitter.com`;
     window.open(twitterLink, '_blank');
 }
 
